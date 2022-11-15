@@ -1,6 +1,6 @@
 # Nasa Media Library Search
 
-An app that makes users enable to search and see detailed view in NASA media library. 
+An app that enables users to search NASA's media library and see detailed views.
 
 **Tech Stack:**
 
