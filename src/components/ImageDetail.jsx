@@ -66,11 +66,12 @@ const ImageDetail = () => {
 export default ImageDetail;
 
 const Container = styled(Flex)`
-  max-width: 80%;
+  max-width: 1024px;
+  color: white;
+  padding-bottom: 1rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    max-width: 100%;
   }
 `;
 

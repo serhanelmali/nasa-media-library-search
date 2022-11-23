@@ -43,6 +43,7 @@ const Container = styled(Flex)`
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
   background: #1f1a19;
   cursor: pointer;
+  color: white;
   width: 250px;
   height: 300px;
   transition: 0.1s;

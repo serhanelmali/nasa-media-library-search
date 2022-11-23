@@ -26,6 +26,7 @@ export default DetailView;
 
 const Container = styled(Flex)`
   width: 100%;
+  max-width: 1024px;
 `;
 const PreviousPageButton = styled(Button)`
   color: white;
