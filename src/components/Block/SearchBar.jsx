@@ -72,7 +72,7 @@ const SearchInput = styled(Input)`
   width: ${({ size }) => (size === "sm" ? "50px" : "300px")};
   outline: none;
   color: white;
-  font-size: ${({ size }) => (size === "sm" ? "14px" : "20px")};
+  font-size: ${({ size }) => (size === "sm" ? "14px" : "18px")};
   padding: ${({ size }) => (size === "sm" ? "0 .5rem" : "0 1rem")};
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
@@ -87,9 +87,6 @@ const SearchInput = styled(Input)`
       : `fadeInOut 0.8s ease-in-out infinite alternate ${
           isError && ", shake 0.5s"
         }`};
-  ::placeholder {
-    font-size: ${({ size }) => (size === "sm" ? "14px" : "18px")};
-  }
 
   &:focus {
     border: 2px solid white;
