@@ -1,9 +1,11 @@
+import { SpinnerDotted } from "spinners-react";
+import { lazy, Suspense } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import Flex from "components/Containers/FlexContainer";
-import ImageDetail from "components/ImageDetail";
-import { Button } from "components/Atoms/Button";
 import { MdKeyboardBackspace } from "react-icons/md";
+import Flex from "components/Containers/FlexContainer";
+import { Button } from "components/Atoms/Button";
+const ImageDetail = lazy(() => import("components/ImageDetail"));
 
 const DetailView = () => {
   const navigate = useNavigate();
@@ -17,7 +19,9 @@ const DetailView = () => {
           </PreviousPageButton>
         </Flex>
       </Container>
-      <ImageDetail />
+      <Suspense fallback={<SpinnerDotted color="rgba(255, 255, 255, 0.51)" />}>
+        <ImageDetail />
+      </Suspense>
     </Flex>
   );
 };
@@ -31,6 +35,10 @@ const Container = styled(Flex)`
 const PreviousPageButton = styled(Button)`
   color: white;
   cursor: pointer;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 5;
 
   &:hover {
     transform: scale(1.1);

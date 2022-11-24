@@ -48,7 +48,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    if (errors) {
+    if (Object.keys(errors).length) {
       toast.error(Object.values(errors)[Object.keys(errors).length - 1], {
         position: "bottom-center",
         autoClose: 1000,
